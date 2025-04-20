@@ -1,11 +1,14 @@
 import React from "react";
 import Sidebar from "@/components/page";
+import Main from "@/components/main/page";
 
 export default function Home() {
   return (
     <>
-      <Sidebar />
-      <h1>first attempt</h1>
+      <div className="layout">
+        <Sidebar />
+        <Main />
+      </div>
     </>
     
   );
