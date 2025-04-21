@@ -142,11 +142,11 @@ export default function Main() {
         
         <div className="welcome__btns">
           <button className="welcome__dowload">
-            <Image src="/download.svg" alt=""  width={16} height={16}/>
+            <Image src="/download.svg" alt="btns"  width={16} height={16}/>
             Скачать
           </button>
           <button className="welcome__abonoment">
-            <Image src="/Icon (4).svg" alt=""  width={14} height={14}/>
+            <Image src="/Icon (4).svg" alt="btns"  width={14} height={14}/>
             Добавить Абономент
           </button>
         </div>
