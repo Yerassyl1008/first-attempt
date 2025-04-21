@@ -142,11 +142,11 @@ export default function Main() {
         
         <div className="welcome__btns">
           <button className="welcome__dowload">
-            <Image src="/download.svg" alt=""  width={18} height={18}/>
+            <Image src="/download.svg" alt=""  width={16} height={16}/>
             Скачать
           </button>
           <button className="welcome__abonoment">
-            <Image src="/Select Indicator.svg" alt=""  width={20} height={20}/>
+            <Image src="/Icon (4).svg" alt=""  width={14} height={14}/>
             Добавить Абономент
           </button>
         </div>
@@ -156,21 +156,27 @@ export default function Main() {
         <div className="action__btns">
           <button className="action__club">
             <Image src="/location.svg" alt="" className="action__icon"  width={18} height={18}/>
-            Клуб ▾
+            <span>Клуб </span>
+            <span>▾</span>
+            
 
           </button>
           <button className="action__continue">
             <Image src="/Icon (1).svg" alt="" className="action__icon"  width={20} height={20}/>
-            Продолжительность ▾
+            <span> Продолжительность</span>
+            <span>▾</span>
+           
 
           </button>
           <button className="action__type">
             <Image src="/Icon (2).svg" alt="Image"  width={20} height={20}/>
-            Тип ▾
-
+            <span>Тип </span>
+            <span>▾</span>
           </button>
           <button className="action__and">
-            Еще +
+            <span>Еще</span>
+            <span>+</span>
+            
           </button>
         </div>
 
