@@ -3,6 +3,32 @@
 import Image from "next/image"
 import styles from './sidebar.module.css'
 import { useEffect } from "react";
+import LeftMenuItem from "./leftMenu/page";
+
+
+const menuItems = [
+  { icon: "/20-user-check.svg", label: "Клиенты"},
+  { icon: "/20-file.svg", label: "Отчеты"},
+  { icon: "/20-accesibility.svg", label: "Фитнес", hasArrow: true},
+  { icon: "/20-check-circle.svg", label: "Контроль качества", hasArrow: true,  childrenItems: [
+    { label: "Зал" },
+    { label: "Тренеры" },
+  ]},
+  { icon: "/20-chart-line.svg", label: "Продажи", hasArrow: true, childrenItems: [
+    {label: "Абонементы"},
+    {label: "Услуги"},
+    {label: "Товары"},
+    {label: "Промокод"}
+  ]},
+  { icon: "/20-users.svg", label: "Сотрудники"},
+  { icon: "/20-lock.svg", label: "Доступы"},
+  { icon: "/20-chart-bar.svg", label: "Маркетинг"},
+  { icon: "/20-star.svg", label: "Клуб"},
+  { icon: "/20-folder.svg", label: "Проекты"},
+  { icon: "/20-layer-three.svg", label: "Сервер"},
+  { icon: "/Group (1).svg", label: "Заказы Kaspi"},
+]
+
 
 export default function Sidebar() {
 
@@ -40,7 +66,21 @@ export default function Sidebar() {
 
         <div className="sidebar__menu">
 
-        <div className="menu__wrapper"> 
+
+
+        {menuItems.map((item, index) => (
+          <LeftMenuItem  key={index} 
+            icon={item.icon} 
+            label={item.label} 
+            hasArrow={item.hasArrow} 
+            childrenItems={item.childrenItems || []}
+            
+          />
+        ))}
+
+
+
+        {/* <div className="menu__wrapper"> 
           <a href="#!" className="menu__item">
             <Image src="/20-user-check.svg" alt="icon" className="menu__icon" width={20} height={20} />
             <span>Клиенты</span>
@@ -97,7 +137,7 @@ export default function Sidebar() {
           </div>
 
           <div className="menu__wrapper">
-            <div className="menu__left menu__item">
+            <div className="menu__item">
               <Image src="/20-lock.svg" alt="icon" className="menu__icon" width={20} height={20}/>
               <span>Доступы</span>
             </div>
@@ -105,7 +145,7 @@ export default function Sidebar() {
           </div>
 
           <div className="menu__wrapper">
-            <div className="menu__left menu__item">
+            <div className="menu__item">
               <Image src="/20-chart-bar.svg" alt="icon" className="menu__icon" width={20} height={20}/>
               <span>Маркетинг</span>
             </div>
@@ -139,7 +179,7 @@ export default function Sidebar() {
               <Image src="/Group (1).svg" alt="icon" className="menu__icon" width={20} height={20}/>
               <span className="control__kaspi">Заказы Kaspi</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
