@@ -10,8 +10,8 @@
       <feGaussianBlur stdDeviation="12"/>
       <feComposite in2="hardAlpha" operator="out"/>
       <feColorMatrix values="0 0 0 0 0.4375 0 0 0 0 0.413802 0 0 0 0 0.413802 0 0 0 0.25 0"/>
-      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_2570_21480"/>
-      <feBlend in="SourceGraphic" in2="effect1_dropShadow_2570_21480" result="shape"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_2570_21479"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_2570_21479" result="shape"/>
     </filter>
   </defs>
 </svg>

@@ -142,11 +142,11 @@ export default function Main() {
         
         <div className="welcome__btns">
           <button className="welcome__dowload">
-            <Image src="/download.svg" alt="btns"  width={16} height={16}/>
+            <Image src="/Before Icon.svg" alt="btns"  width={16} height={16}/>
             Скачать
           </button>
           <button className="welcome__abonoment">
-            <Image src="/Icon (4).svg" alt="btns"  width={14} height={14}/>
+            <Image src="/Before Icon (1).svg" alt="btns"  width={20} height={20}/>
             Добавить Абономент
           </button>
         </div>
@@ -155,21 +155,21 @@ export default function Main() {
       <section className="action">
         <div className="action__btns">
           <button className="action__club">
-            <Image src="/location.svg" alt="" className="action__icon"  width={18} height={18}/>
+            <Image src="/Icon (6).svg" alt="" className="action__icon"  width={18} height={18}/>
             <span>Клуб </span>
             <span>▾</span>
             
 
           </button>
           <button className="action__continue">
-            <Image src="/Icon (1).svg" alt="" className="action__icon"  width={20} height={20}/>
+            <Image src="/Icon (7).svg" alt="" className="action__icon"  width={20} height={20}/>
             <span> Продолжительность</span>
             <span>▾</span>
            
 
           </button>
           <button className="action__type">
-            <Image src="/Icon (2).svg" alt="Image"  width={20} height={20}/>
+            <Image src="/Icon (9).svg" alt="Image"  width={20} height={20}/>
             <span>Тип </span>
             <span>▾</span>
           </button>
@@ -181,7 +181,7 @@ export default function Main() {
         </div>
 
         <div className="action__input">
-          <Image src="/search.svg" alt="search__icon" className="action__search"  width={100} height={100}/>
+          <Image src="/Icon (8).svg" alt="search__icon" className="action__search"  width={100} height={100}/>
           <input type="text" placeholder="Пойск по Названию" />
         </div>
       </section>
