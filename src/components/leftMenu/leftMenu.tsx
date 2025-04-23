@@ -1,22 +1,32 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { FC, useState } from "react";
+import styles from './styles.module.css';
 
-const LeftMenuItem = ({ icon, label, hasArrow, childrenItems = [] }) => {
+type LeftMenuItemProps = {
+  icon: string;
+  label: string;
+  childrenItems?: Array<{ label: string }>;
+}
+
+const LeftMenuItem:FC<LeftMenuItemProps> = ({ icon, label, childrenItems = [] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const isHasArrow = childrenItems.length > 0;
+
+
   const toggleSubmenu = () => {
-    if (hasArrow) setIsOpen(!isOpen);
+    if (isHasArrow) setIsOpen(!isOpen);
   };
 
   return (
-    <div className="menu__wrapper">
+    <div className={styles.container}>
       <div 
         className="menu__item-container"
         onClick={toggleSubmenu}
         style={{
-          cursor: hasArrow ? "pointer" : "default",
+          cursor: isHasArrow ? "pointer" : "default",
         }}
       >
         <div className="menu__item">
@@ -24,7 +34,7 @@ const LeftMenuItem = ({ icon, label, hasArrow, childrenItems = [] }) => {
             <Image src={icon} alt={label} width={20} height={20} />
             <span>{label}</span>
           </div>
-          {hasArrow && (
+          {isHasArrow && (
             <Image
               src="/Icon_Arrow Down A.svg"
               alt="arrow"
@@ -36,7 +46,7 @@ const LeftMenuItem = ({ icon, label, hasArrow, childrenItems = [] }) => {
         </div>
       </div>
 
-      {/* {isOpen && hasArrow && (
+      {isOpen && childrenItems && (
         <ul className="submenu">
           {childrenItems.map((subItem, idx) => (
             <li key={idx}>
@@ -44,9 +54,9 @@ const LeftMenuItem = ({ icon, label, hasArrow, childrenItems = [] }) => {
             </li>
           ))}
         </ul>
-      )} */}
+      )}
     </div>
   );
 };
 
-export default LeftMenuItem;
+export {LeftMenuItem};

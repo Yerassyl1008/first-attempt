@@ -3,7 +3,7 @@
 import Image from "next/image"
 import styles from './sidebar.module.css'
 import { useEffect } from "react";
-import LeftMenuItem from "./leftMenu/page";
+import {LeftMenuItem} from "./leftMenu/";
 
 
 const menuItems = [
@@ -68,13 +68,11 @@ export default function Sidebar() {
 
 
 
-        {menuItems.map((item, index) => (
-          <LeftMenuItem  key={index} 
+        {menuItems.map((item) => (
+          <LeftMenuItem  key={item.label} 
             icon={item.icon} 
             label={item.label} 
-            hasArrow={item.hasArrow} 
-            childrenItems={item.childrenItems || []}
-            
+            childrenItems={item?.childrenItems || []}
           />
         ))}
 
